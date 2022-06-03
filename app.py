@@ -82,7 +82,7 @@ Select_year=df.groupby(['year','sex','country'])['suicides_no'].sum().reset_inde
 
 year_option = st.selectbox(
      'Select Year',
-     df['year'].drop_duplicates())
+     sorted(df['year'].drop_duplicates()))
 
 st.subheader('Top 10 Countries Suicide rate in '+str(year_option))
 
